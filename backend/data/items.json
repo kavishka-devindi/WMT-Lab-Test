@@ -1,0 +1,13 @@
+[
+  {
+    "name": "book",
+    "category": "thriller",
+    "price": 450,
+    "description": "good book",
+    "imageUrl": "utp.png",
+    "modelNumber": "7",
+    "_id": "0009f871-d34c-445e-a459-2655c0b9882c",
+    "createdAt": "2026-04-28T10:46:07.892Z",
+    "updatedAt": "2026-04-28T10:46:07.892Z"
+  }
+]
