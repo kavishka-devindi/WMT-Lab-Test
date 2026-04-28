@@ -4,14 +4,22 @@ import ItemCard from "../components/ItemCard.jsx";
 
 function HomePage() {
   const [items, setItems] = useState([]);
+  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const fetchItems = async () => {
     try {
       const { data } = await getItems();
-      setItems(data);
+      if (Array.isArray(data)) {
+        setItems(data);
+      } else {
+        console.error("Unexpected items response", data);
+        setError("Failed to load items from server.");
+        setItems([]);
+      }
     } catch (error) {
       console.error("Failed to fetch items", error);
+      setError("Failed to load items from server.");
     } finally {
       setLoading(false);
     }
@@ -39,6 +47,8 @@ function HomePage() {
         <h1>Item Details</h1>
         <p>View, manage, edit, and remove items from the inventory.</p>
       </div>
+
+        {error && <p className="error-message">{error}</p>}
 
       {loading ? (
         <p>Loading items...</p>

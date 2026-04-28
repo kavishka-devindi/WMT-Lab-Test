@@ -3,6 +3,17 @@
     "name": "book",
     "category": "thriller",
     "price": 450,
+    "description": "ii",
+    "imageUrl": "utp.png",
+    "modelNumber": "7",
+    "_id": "3fccfb78-40d6-45e1-838c-0d21d268a5f6",
+    "createdAt": "2026-04-28T11:44:25.216Z",
+    "updatedAt": "2026-04-28T11:44:25.216Z"
+  },
+  {
+    "name": "book",
+    "category": "thriller",
+    "price": 450,
     "description": "good book",
     "imageUrl": "utp.png",
     "modelNumber": "7",
